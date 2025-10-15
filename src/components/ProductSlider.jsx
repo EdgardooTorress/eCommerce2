@@ -1,0 +1,83 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import "../style/product-slider.css"
+
+const products = [
+  { id: 1, name: "Creed Aventus", price: 129.99, image: "/creed.webp" },
+  { id: 2, name: "Rabanne Elixir", price: 159.99, image: "/Rabanne elixir.webp" },
+  { id: 3, name: "Valentino Born in Roma", price: 119.99, image: "/valentino.webp" },
+  { id: 4, name: "Prada Luna Sport", price: 139.99, image: "/prada.webp" },
+  { id: 5, name: "Stronger With You", price: 139.99, image: "/Stronger.webp" },
+  { id: 6, name: "1 Million Lucky", price: 139.99, image: "/lucky.webp" },
+  { id: 7, name: "Versace Eros", price: 139.99, image: "/Eros.webp" },
+]
+
+export default function ProductSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % products.length)
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length)
+  }
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % products.length)
+  }
+
+  const getClassName = (index) => {
+    if (index === currentIndex) return "slide active"
+    if (index === (currentIndex - 1 + products.length) % products.length) return "slide prev"
+    if (index === (currentIndex + 1) % products.length) return "slide next"
+    return "slide hidden"
+  }
+
+  return (
+    <section className="section">
+      <div className="container">
+        <h2 className="heading">Featured Fragrances</h2>
+
+        <div className="sliderWrapper">
+          <button onClick={goToPrevious} className="navButton prevButton" aria-label="Previous product">
+            ‹
+          </button>
+
+          <div className="slider">
+            {products.map((product, index) => (
+              <div key={product.id} className={getClassName(index)}>
+                <div className="card">
+                  <img src={product.image || "/placeholder.svg"} alt={product.name} className="image" />
+                  <div className="cardContent">
+                    <h3 className="productName">{product.name}</h3>
+                    {index === currentIndex && <button className="shopNowBtn">Shop Now</button>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button onClick={goToNext} className="navButton nextButton" aria-label="Next product">
+            ›
+          </button>
+
+          <div className="dots">
+            {products.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`dot ${index === currentIndex ? "activeDot" : ""}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

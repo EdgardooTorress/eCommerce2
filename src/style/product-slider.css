@@ -1,0 +1,553 @@
+.section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: #000000;
+}
+
+/* Slider layout */
+.sliderWrapper {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0 80px; /* Added padding to contain buttons */
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 480px;
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: scale(0.75);
+  z-index: 0;
+  width: 46%;
+}
+
+/* Active center slide */
+.slide.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Left / Right slides (desktop) */
+.slide.prev {
+  transform: translateX(-380px) scale(0.85); /* Reduced translateX for better spacing */
+  opacity: 0.7;
+  z-index: 2;
+}
+.slide.next {
+  transform: translateX(380px) scale(0.85); /* Reduced translateX for better spacing */
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* Hidden slides */
+.slide.hidden {
+  opacity: 0;
+  transform: scale(0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  background: #ffffff;
+  display: block;
+}
+
+.cardContent {
+  padding: 1rem;
+  text-align: center;
+}
+
+.productName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+/* Shop Now button */
+.shopNowBtn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.shopNowBtn:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+/* Arrows */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000;
+  color: #ffffff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+.navButton:hover {
+  opacity: 0.9;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevButton {
+  left: 10px; /* Positioned inside wrapper instead of negative values */
+}
+.nextButton {
+  right: 10px; /* Positioned inside wrapper instead of negative values */
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.activeDot {
+  background-color: #000000;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Improved tablet landscape responsiveness (1024px and below) */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .sliderWrapper {
+    padding: 0 70px; /* Adjusted padding for tablet */
+  }
+
+  .slider {
+    height: 450px;
+  }
+
+  .slide {
+    width: 55%;
+  }
+
+  .slide.prev {
+    transform: translateX(-260px) scale(0.82); /* Better proportional spacing */
+    opacity: 0.65;
+  }
+
+  .slide.next {
+    transform: translateX(260px) scale(0.82); /* Better proportional spacing */
+    opacity: 0.65;
+  }
+
+  .image {
+    height: 320px;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .cardContent {
+    padding: 0.75rem;
+  }
+
+  .productName {
+    font-size: 1.6rem;
+  }
+
+  .shopNowBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .navButton {
+    width: 48px;
+    height: 48px;
+    font-size: 1.8rem;
+  }
+
+  .prevButton {
+    left: 8px; /* Consistent inside positioning */
+  }
+  .nextButton {
+    right: 8px; /* Consistent inside positioning */
+  }
+
+  .dots {
+    margin-top: 1.5rem;
+    gap: 0.4rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Improved tablet portrait responsiveness (820px and below) */
+@media (max-width: 820px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sliderWrapper {
+    padding: 0 60px; /* Adjusted padding for smaller tablets */
+  }
+
+  .slider {
+    height: 420px;
+  }
+
+  .slide {
+    width: 65%;
+  }
+
+  .slide.prev {
+    transform: translateX(-180px) scale(0.78); /* Reduced movement to prevent overlap */
+    opacity: 0.5;
+  }
+
+  .slide.next {
+    transform: translateX(180px) scale(0.78); /* Reduced movement to prevent overlap */
+    opacity: 0.5;
+  }
+
+  .image {
+    height: 290px;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .cardContent {
+    padding: 0.75rem;
+  }
+
+  .productName {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .shopNowBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .navButton {
+    width: 48px;
+    height: 48px;
+    font-size: 1.8rem;
+  }
+
+  .prevButton {
+    left: 6px;
+  }
+  .nextButton {
+    right: 6px;
+  }
+
+  .dots {
+    margin-top: 1.5rem;
+    gap: 0.4rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Improved mobile landscape responsiveness (680px and below) */
+@media (max-width: 680px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sliderWrapper {
+    padding: 0 50px; /* Padding to accommodate buttons */
+  }
+
+  .slider {
+    height: 380px;
+  }
+
+  .slide {
+    width: 75%;
+  }
+
+  /* Reduced side slide visibility and movement for better mobile experience */
+  .slide.prev {
+    transform: translateX(-120px) scale(0.72); /* Minimal movement for mobile */
+    opacity: 0.35;
+  }
+
+  .slide.next {
+    transform: translateX(120px) scale(0.72); /* Minimal movement for mobile */
+    opacity: 0.35;
+  }
+
+  .image {
+    height: 250px;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+
+  .cardContent {
+    padding: 0.5rem;
+  }
+
+  .productName {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .shopNowBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .navButton {
+    width: 42px;
+    height: 42px;
+    font-size: 1.6rem;
+  }
+
+  /* Moved buttons inside viewport to prevent overflow */
+  .prevButton {
+    left: 4px;
+  }
+  .nextButton {
+    right: 4px;
+  }
+
+  .dots {
+    margin-top: 1.5rem;
+    gap: 0.4rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Improved mobile portrait responsiveness (480px and below) */
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .sliderWrapper {
+    padding: 0 45px; /* Minimal padding for small screens */
+  }
+
+  .slider {
+    height: 360px;
+  }
+
+  .slide {
+    width: 85%;
+  }
+
+  /* Further reduced side slides for small mobile screens */
+  .slide.prev {
+    transform: translateX(-85px) scale(0.65); /* Very minimal side card visibility */
+    opacity: 0.25;
+  }
+
+  .slide.next {
+    transform: translateX(85px) scale(0.65); /* Very minimal side card visibility */
+    opacity: 0.25;
+  }
+
+  .image {
+    height: 220px;
+  }
+
+  .card {
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .cardContent {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .productName {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .shopNowBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+  }
+
+  .navButton {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+
+  .prevButton {
+    left: 3px;
+  }
+  .nextButton {
+    right: 3px;
+  }
+
+  .dots {
+    margin-top: 1.25rem;
+    gap: 0.35rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small mobile devices (360px and below) */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+
+  .slider {
+    height: 320px;
+  }
+
+  .slide {
+    width: 90%;
+  }
+
+  /* Hide side slides completely on very small screens for cleaner look */
+  .slide.prev,
+  .slide.next {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .image {
+    height: 190px;
+  }
+
+  .productName {
+    font-size: 1.1rem;
+  }
+
+  .shopNowBtn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .navButton {
+    width: 34px;
+    height: 34px;
+    font-size: 1.2rem;
+  }
+
+  .prevButton {
+    left: 2px;
+  }
+  .nextButton {
+    right: 2px;
+  }
+
+  .dots {
+    margin-top: 1.25rem;
+    gap: 0.35rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

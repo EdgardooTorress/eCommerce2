@@ -1,0 +1,101 @@
+
+.form {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  height: 500px;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.field { margin-bottom: 1.5rem; }
+
+.label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+}
+
+/* Black inputs, white text/border */
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color:white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 2rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: gold;
+}
+
+.inputError { border-color: red; }
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover { opacity: 0.9; }
+
+.successMessage {
+  background-color:black;
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.successMessage h3 { 
+  font-size: 5rem;
+   margin-bottom: 0.5rem;
+   }
+.successMessage p { 
+  font-size: 4rem; 
+}
+
+@media (max-width: 768px) {
+  .row { grid-template-columns: 1fr; }
+}
