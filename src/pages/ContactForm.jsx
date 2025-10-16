@@ -55,7 +55,6 @@ export default function ContactForm() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
 
-    // live-clear a specific error as the user types
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }))
     }
@@ -97,6 +96,10 @@ export default function ContactForm() {
   }
 
   return (
+    <div className="contact-form">
+
+    <h1 className="contact-title">Contact Us</h1>
+
     <form onSubmit={handleSubmit} className="form">
       <div className="row">
         <div className="field">
@@ -167,5 +170,7 @@ export default function ContactForm() {
 
       <button type="submit" className="button">Send Message</button>
     </form>
+    </div>
   )
 }
+

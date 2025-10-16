@@ -23,7 +23,7 @@
   width: 100%;
   margin: 0 auto;
   overflow: visible;
-  padding: 0 80px; /* Added padding to contain buttons */
+  padding: 0 80px; 
 }
 
 .slider {
@@ -53,12 +53,12 @@
 
 /* Left / Right slides (desktop) */
 .slide.prev {
-  transform: translateX(-380px) scale(0.85); /* Reduced translateX for better spacing */
+  transform: translateX(-380px) scale(0.85); 
   opacity: 0.7;
   z-index: 2;
 }
 .slide.next {
-  transform: translateX(380px) scale(0.85); /* Reduced translateX for better spacing */
+  transform: translateX(380px) scale(0.85);
   opacity: 0.7;
   z-index: 2;
 }
@@ -142,10 +142,10 @@
 }
 
 .prevButton {
-  left: 10px; /* Positioned inside wrapper instead of negative values */
+  left: 10px; 
 }
 .nextButton {
-  right: 10px; /* Positioned inside wrapper instead of negative values */
+  right: 10px; 
 }
 
 /* Dots */
@@ -170,7 +170,7 @@
 
 /* ---------- Responsive ---------- */
 
-/* Improved tablet landscape responsiveness (1024px and below) */
+/* tablet */
 @media (max-width: 1024px) {
   .heading {
     font-size: 2.5rem;
@@ -190,12 +190,12 @@
   }
 
   .slide.prev {
-    transform: translateX(-260px) scale(0.82); /* Better proportional spacing */
+    transform: translateX(-260px) scale(0.82); 
     opacity: 0.65;
   }
 
   .slide.next {
-    transform: translateX(260px) scale(0.82); /* Better proportional spacing */
+    transform: translateX(260px) scale(0.82); 
     opacity: 0.65;
   }
 
@@ -227,10 +227,10 @@
   }
 
   .prevButton {
-    left: 8px; /* Consistent inside positioning */
+    left: 8px; 
   }
   .nextButton {
-    right: 8px; /* Consistent inside positioning */
+    right: 8px; 
   }
 
   .dots {
@@ -244,7 +244,6 @@
   }
 }
 
-/* Improved tablet portrait responsiveness (820px and below) */
 @media (max-width: 820px) {
   .container {
     padding: 0 1.5rem;
@@ -256,7 +255,7 @@
   }
 
   .sliderWrapper {
-    padding: 0 60px; /* Adjusted padding for smaller tablets */
+    padding: 0 60px; 
   }
 
   .slider {
@@ -268,12 +267,12 @@
   }
 
   .slide.prev {
-    transform: translateX(-180px) scale(0.78); /* Reduced movement to prevent overlap */
+    transform: translateX(-180px) scale(0.78); 
     opacity: 0.5;
   }
 
   .slide.next {
-    transform: translateX(180px) scale(0.78); /* Reduced movement to prevent overlap */
+    transform: translateX(180px) scale(0.78); 
     opacity: 0.5;
   }
 
@@ -323,7 +322,6 @@
   }
 }
 
-/* Improved mobile landscape responsiveness (680px and below) */
 @media (max-width: 680px) {
   .section {
     padding: 4rem 0;
@@ -339,7 +337,7 @@
   }
 
   .sliderWrapper {
-    padding: 0 50px; /* Padding to accommodate buttons */
+    padding: 0 50px; 
   }
 
   .slider {
@@ -350,14 +348,13 @@
     width: 75%;
   }
 
-  /* Reduced side slide visibility and movement for better mobile experience */
   .slide.prev {
-    transform: translateX(-120px) scale(0.72); /* Minimal movement for mobile */
+    transform: translateX(-120px) scale(0.72); 
     opacity: 0.35;
   }
 
   .slide.next {
-    transform: translateX(120px) scale(0.72); /* Minimal movement for mobile */
+    transform: translateX(120px) scale(0.72);
     opacity: 0.35;
   }
 
@@ -389,7 +386,6 @@
     font-size: 1.6rem;
   }
 
-  /* Moved buttons inside viewport to prevent overflow */
   .prevButton {
     left: 4px;
   }
@@ -408,7 +404,6 @@
   }
 }
 
-/* Improved mobile portrait responsiveness (480px and below) */
 @media (max-width: 480px) {
   .section {
     padding: 3rem 0;
@@ -424,7 +419,7 @@
   }
 
   .sliderWrapper {
-    padding: 0 45px; /* Minimal padding for small screens */
+    padding: 0 45px; 
   }
 
   .slider {
@@ -435,7 +430,6 @@
     width: 85%;
   }
 
-  /* Further reduced side slides for small mobile screens */
   .slide.prev {
     transform: translateX(-85px) scale(0.65); /* Very minimal side card visibility */
     opacity: 0.25;
@@ -494,7 +488,6 @@
   }
 }
 
-/* Extra small mobile devices (360px and below) */
 @media (max-width: 360px) {
   .heading {
     font-size: 1.3rem;
@@ -508,7 +501,6 @@
     width: 90%;
   }
 
-  /* Hide side slides completely on very small screens for cleaner look */
   .slide.prev,
   .slide.next {
     opacity: 0;

@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   /* Avoid big vertical gaps between sections */
-  justify-content: flex-start;        /* was space-around */
+  justify-content: flex-start; /* was space-around */
   /* Prevent tiny horizontal overflow on mobile/tablet */
   overflow-x: hidden;
 }
@@ -121,9 +121,9 @@ nav li:first-child {
   overflow: hidden;
 }
 video {
-  width: 100%;                 
+  width: 100%;
   height: 60vh;
-  object-fit: cover;           
+  object-fit: cover;
   margin-bottom: 3rem;
 }
 video:hover {
@@ -215,7 +215,7 @@ footer {
   height: 2rem;
 }
 .footer-socials a:hover {
-  background-color: #000000;   
+  background-color: #000000;
   fill: #ffffff;
 }
 
@@ -241,28 +241,47 @@ footer {
 }
 
 /* -------- Breakpoints -------- */
-@media (max-width: 1260px){
+@media (max-width: 1260px) {
   .reviews {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Close this block before opening the 500px one */
 @media (max-width: 935px) {
-  html { font-size: 50%; }
-  .hideMobile { display: none; }
-  .menu-btn { display: block; }
-  .reviews { grid-template-columns: repeat(2, 1fr); }
-  .sidebar li { padding: 5rem 0; }
-  .sidebar a { color: white; font-size: 3rem; }
+  html {
+    font-size: 50%;
+  }
+  .hideMobile {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sidebar li {
+    padding: 5rem 0;
+  }
+  .sidebar a {
+    color: white;
+    font-size: 3rem;
+  }
 }
 
-/* Separate, top-level (not nested) */
 @media (max-width: 500px) {
-  html { font-size: 40%; }
-  .sidebar { width: 100%; }
-  .menu-btn { display: block; }
-  .reviews { grid-template-columns: repeat(1, 1fr); }
+  html {
+    font-size: 40%;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .reviews {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .sale p {
     font-size: 1rem;
@@ -281,6 +300,11 @@ footer {
     height: auto;
   }
 
-  .sidebar li { padding: 5rem 0; }
-  .sidebar a { color: white; font-size: 3rem; }
+  .sidebar li {
+    padding: 5rem 0;
+  }
+  .sidebar a {
+    color: white;
+    font-size: 3rem;
+  }
 }

@@ -4,13 +4,13 @@ import { useEffect, useState } from "react"
 import "../style/product-slider.css"
 
 const products = [
-  { id: 1, name: "Creed Aventus", price: 129.99, image: "/creed.webp" },
-  { id: 2, name: "Rabanne Elixir", price: 159.99, image: "/Rabanne elixir.webp" },
-  { id: 3, name: "Valentino Born in Roma", price: 119.99, image: "/valentino.webp" },
-  { id: 4, name: "Prada Luna Sport", price: 139.99, image: "/prada.webp" },
-  { id: 5, name: "Stronger With You", price: 139.99, image: "/Stronger.webp" },
-  { id: 6, name: "1 Million Lucky", price: 139.99, image: "/lucky.webp" },
-  { id: 7, name: "Versace Eros", price: 139.99, image: "/Eros.webp" },
+  { id: 1, name: "Creed Aventus", image: "/creed.webp" },
+  { id: 2, name: "Rabanne Elixir", image: "/Rabanne elixir.webp" },
+  { id: 3, name: "Valentino Born in Roma", image: "/valentino.webp" },
+  { id: 4, name: "Prada Luna Sport", image: "/prada.webp" },
+  { id: 5, name: "Stronger With You", image: "/Stronger.webp" },
+  { id: 6, name: "1 Million Lucky", image: "/lucky.webp" },
+  { id: 7, name: "Versace Eros", image: "/Eros.webp" },
 ]
 
 export default function ProductSlider() {
