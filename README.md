@@ -5,7 +5,7 @@ A modern eCommerce web app for luxury **fragrances**. Built with **React** and f
 ---
 
 ## 🌐 Live Demo 
-`https://ecommerce2-static.onrender.com/)`
+`https://ecommerce2-static.onrender.com/`
 
 ---
 
