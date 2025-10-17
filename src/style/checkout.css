@@ -1,0 +1,34 @@
+.notfound {
+  text-align: center;
+  margin:30rem auto;
+  color: #333;
+}
+
+.notfound h1 {
+  font-size: 8rem;
+  color: crimson;
+}
+
+.notfound h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.notfound p {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.home-link {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 2rem;
+}
+
+.home-link:hover {
+  background-color: crimson;
+}

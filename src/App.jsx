@@ -5,17 +5,9 @@ import Navbar from "./components/Navbar.jsx"
 import SiteFooter from "./components/SiteFooter.jsx"
 import ContactForm from "./pages/ContactForm.jsx"
 import HomePage from "./pages/HomePage.jsx"         
-import ProductsPage from "./pages/ProductsPage.jsx"   
-
-
-function CheckoutPage() {
-  return (
-    <section style={{ padding: "2rem" }}>
-      <h2>Checkout</h2>
-      <p>Cart / checkout flow.</p>
-    </section>
-  )
-}
+import ProductsPage from "./pages/ProductsPage.jsx" 
+import NotFound from "./pages/NotFound.jsx"
+import CheckoutPage from "./pages/CheckoutPage.jsx"
 
 export default function App() {
   return (
@@ -28,6 +20,7 @@ export default function App() {
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <SiteFooter />

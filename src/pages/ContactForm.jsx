@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../contact-form.css" // uses global classes, not CSS modules
+import "../style/contact-form.css" // uses global classes, not CSS modules
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

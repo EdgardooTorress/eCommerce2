@@ -12,10 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Avoid big vertical gaps between sections */
-  justify-content: flex-start; /* was space-around */
-  /* Prevent tiny horizontal overflow on mobile/tablet */
-  overflow-x: hidden;
+  justify-content: space-around;
 }
 
 .banner {
@@ -112,8 +109,6 @@ nav li:first-child {
   height: 6rem;
   width: auto;
 }
-
-/* -------- Hero video -------- */
 .video {
   position: relative;
   width: 100%;
@@ -121,11 +116,12 @@ nav li:first-child {
   overflow: hidden;
 }
 video {
-  width: 100%;
+  width: 100vw;
   height: 60vh;
-  object-fit: cover;
+  object-fit: fill;
   margin-bottom: 3rem;
 }
+
 video:hover {
   text-decoration: none;
 }
@@ -135,14 +131,13 @@ video:hover {
   width: 100%;
   bottom: 0%;
   height: 5rem;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: 2.5rem;
   background-color: #f0f0f03d;
   text-align: center;
   padding: 1rem;
 }
 
-/* -------- Reviews -------- */
 .review-title {
   text-align: center;
   font-size: 2rem;
@@ -154,6 +149,7 @@ video:hover {
   grid-auto-rows: 1fr;
   gap: 2rem;
   padding: 1rem 0 3rem;
+
 }
 .review-box {
   border: 0;
@@ -166,7 +162,6 @@ video:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* -------- Footer -------- */
 footer {
   display: flex;
   justify-content: space-evenly;
@@ -195,11 +190,11 @@ footer {
 .footer-aboutus a:hover {
   text-decoration: underline;
 }
-
 .footer-socials {
   display: flex;
   gap: 1rem;
 }
+
 .footer-socials a {
   background-color: #f0f0f0;
   padding: 1em;
@@ -211,12 +206,14 @@ footer {
   display: grid;
   place-items: center;
 }
+
 .footer-socials a svg {
   height: 2rem;
 }
+
 .footer-socials a:hover {
-  background-color: #000000;
-  fill: #ffffff;
+  background-color: var(--accent-color);
+  fill: white;
 }
 
 .footer-returns {
@@ -234,17 +231,19 @@ footer {
   height: 2rem;
   font-size: 2rem;
   text-decoration: none;
-  margin: 1rem 0;
+   margin: 1rem 0;
 }
+
 .footer-returns a:hover {
   text-decoration: underline;
 }
 
-/* -------- Breakpoints -------- */
-@media (max-width: 1260px) {
-  .reviews {
+
+@media (max-width: 1260px){
+ .reviews {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }
 
 @media (max-width: 935px) {
@@ -263,48 +262,50 @@ footer {
   .sidebar li {
     padding: 5rem 0;
   }
-  .sidebar a {
-    color: white;
-    font-size: 3rem;
-  }
-}
+      .sidebar a {
+      color: rgb(0, 0, 0);
+      font-size: 3rem;
+    }
 
-@media (max-width: 500px) {
-  html {
-    font-size: 40%;
-  }
-  .sidebar {
-    width: 100%;
-  }
-  .menu-btn {
-    display: block;
-  }
-  .reviews {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  @media (max-width: 500px) {
+    html {
+      font-size: 40%;
+    }
+    .sidebar {
+      width: 100%;
+    }
+    .menu-btn {
+      display: block;
+    }
+    .reviews {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .sale p {
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+    }
 
-  .sale p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-  }
-  .time p {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
+    .time p {
+      font-size: 1rem;
+      padding: 0 0.5rem;
+    }
 
-  footer {
-    padding-left: 3rem;
-    flex-direction: column;
-    gap: 5rem;
-    height: auto;
-  }
+    footer {
+      padding-left: 3rem;
+      flex-direction: column;
+      gap: 5rem;
+      height: auto;
+    }
 
-  .sidebar li {
-    padding: 5rem 0;
-  }
-  .sidebar a {
-    color: white;
-    font-size: 3rem;
+
+
+    .sidebar li {
+      padding: 5rem 0;
+    }
+    .sidebar a {
+      color: rgb(0, 0, 0);
+      font-size: 3rem;
+    }
   }
 }

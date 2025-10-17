@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import "../style/product-slider.css"
+import { Link } from "react-router-dom"
 
 const products = [
   { id: 1, name: "Creed Aventus", image: "/creed.webp" },
@@ -55,7 +56,7 @@ export default function ProductSlider() {
                   <img src={product.image || "/placeholder.svg"} alt={product.name} className="image" />
                   <div className="cardContent">
                     <h3 className="productName">{product.name}</h3>
-                    {index === currentIndex && <button className="shopNowBtn">Shop Now</button>}
+                    {index === currentIndex && (<Link to="/products" className="shopNowBtn">Shop Now</Link>)}
                   </div>
                 </div>
               </div>
