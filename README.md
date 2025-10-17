@@ -9,12 +9,6 @@ A modern eCommerce web app for luxury **fragrances**. Built with **React** and f
 
 ---
 
-## Overview
-**ETFragrance** lets users browse curated scents, filter by price and type, and contact the brand via a validated form. The app demonstrates clean UI, component reusability, database integration, and mobile-first responsiveness.
-
-
----
-
 ## ✨ Features
 - **Home**: Featured content and a functioning **image slider**.
 - **Products**: 12+ products fetched from a **database**. Live **filters** by price and type (e.g., Men/Women/Unisex).
