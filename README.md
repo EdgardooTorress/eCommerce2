@@ -11,7 +11,7 @@ A modern eCommerce web app for luxury **fragrances**. Built with **React** and f
 
 ## ✨ Features
 - **Home**: Featured content and a functioning **image slider**.
-- **Products**: 12+ products fetched from a **database**. Live **filters** by price and type (e.g., Men/Women/Unisex).
+- **Products**: 12+ products fetched from a **database**. Live **filters** by price
 - **Contact**: Simple **validated** form (name, email with regex validation, comment) with user feedback.
 - **Responsive**: Layout adapts to **mobile, tablet, and desktop** using CSS Grid/Flexbox.
 - **Shared UI**: **Navbar** and **Footer** as React components with social links.
