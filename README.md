@@ -1,3 +1,37 @@
+# 💎 ETFragrance
+
+A modern eCommerce web app for luxury **fragrances**. Built with **React** and fully responsive, ETFragrance showcases a home-page slider, a database-driven products page with filters, and a validated contact form — all wrapped with reusable navigation and footer components.
+
+---
+
+## 🌐 Live Demo 
+`https://ecommerce2-static.onrender.com/)`
+
+---
+
+## Overview
+**ETFragrance** lets users browse curated scents, filter by price and type, and contact the brand via a validated form. The app demonstrates clean UI, component reusability, database integration, and mobile-first responsiveness.
+
+
+---
+
+## ✨ Features
+- **Home**: Featured content and a functioning **image slider**.
+- **Products**: 12+ products fetched from a **database**. Live **filters** by price and type (e.g., Men/Women/Unisex).
+- **Contact**: Simple **validated** form (name, email with regex validation, comment) with user feedback.
+- **Responsive**: Layout adapts to **mobile, tablet, and desktop** using CSS Grid/Flexbox.
+- **Shared UI**: **Navbar** and **Footer** as React components with social links.
+
+---
+
+## ⚙️ Tech Stack
+**Frontend**: React (Vite), JavaScript (ES6+), CSS (Flexbox/Grid, Media Queries)  
+**Backend/DB**: Express + Supabase  
+**Tooling**: Node.js, Git/GitHub, Render (deployment)
+
+---
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
